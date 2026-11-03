@@ -1,0 +1,17 @@
+<section class="detail-page">
+	@if (libro; as libro) {
+		<span class="eyebrow">{{ libro.genero }}</span>
+		<h1>{{ libro.titulo }}</h1>
+		<p class="author">{{ libro.autor }}</p>
+		<div class="detail-actions">
+			<button type="button" (click)="siguienteLibro()">Siguiente libro</button>
+			<button type="button" class="secondary" (click)="irACuenta()">Ir a mi cuenta</button>
+		</div>
+		<a class="back-link" routerLink="/libros">← Volver al catálogo</a>
+	} @else {
+		<span class="eyebrow">Catálogo</span>
+		<h1>Libro no encontrado</h1>
+		<p>No existe ningún libro con ese identificador.</p>
+		<a class="back-link" routerLink="/libros">Volver al catálogo</a>
+	}
+</section>
