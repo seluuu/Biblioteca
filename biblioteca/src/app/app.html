@@ -1,0 +1,17 @@
+<header class="site-header">
+  <a class="brand" routerLink="/inicio">Biblioteca <span>de Jose Luis</span></a>
+  <nav aria-label="Navegación principal">
+    <a routerLink="/inicio" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+    <a routerLink="/libros" routerLinkActive="active">Libros</a>
+    <a routerLink="/autores" routerLinkActive="active">Autores</a>
+  </nav>
+</header>
+
+<main class="page-shell">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="site-footer">
+  <span>Biblioteca de Jose Luis</span>
+  <span>Lecturas que dejan huella</span>
+</footer>
